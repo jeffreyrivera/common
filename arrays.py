@@ -37,12 +37,26 @@ def stringUnique2(str):
     return True
     
 #Example
-print (stringUnique("calros"))
-print (stringUnique2("calros"))
-print (stringUnique("caaa"))
-print (stringUnique2("sasfdv asdasdd"))
+# print (stringUnique("calros"))
+# print (stringUnique2("calros"))
+# print (stringUnique("caaa"))
+# print (stringUnique2("sasfdv asdasdd"))
 
 
+# Prob2. Give two strings , write a method to decide if one is a permutation of the other
+
+def checkPerm(a,b):
+    if (a is None or b is None):
+        return False
+    elif len(a) != len(b):
+        return False
+    else:
+        return sorted(a) == sorted(b)
 
 
+print (checkPerm("calros", "alrosc"))
+print (checkPerm("calros", "alroscs"))
+print (checkPerm("calros", "alroscsds"))
+print (checkPerm("calros", None))
+print (checkPerm(None, "asdsad"))
 
